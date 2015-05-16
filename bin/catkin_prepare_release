@@ -259,7 +259,7 @@ def main():
             try:
                 metapackage.validate_metapackage(pkg_path, package)
             except metapackage.InvalidMetapackage as e:
-                raise RuntimeError(fmt("@{rf}Invalid metapackage at path '@{boldon}%s@{boldoff}':\n  %s\n\nSee requirements for metapackages: %s" % (os.path.abspath(pkg_path), str(e), metapackage.DEFINITION_URL)))
+                raise RuntimeError(fmt("@{rf}Invalid metapackage at path '@{boldon}%s@{boldoff}':\n  %s\nSee requirements for metapackages: %s" % (os.path.abspath(pkg_path), str(e), metapackage.DEFINITION_URL)))
 
     # fetch current version and verify that all packages have same version number
     old_version = verify_equal_package_versions(packages.values())
